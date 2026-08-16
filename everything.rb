@@ -5,21 +5,21 @@
 class Everything < Formula
   desc "Dump your entire project into a single file. Mostly for feeding code to LLMs."
   homepage "https://github.com/Hxmbl/everything"
-  version "1.2.1"
+  version "1.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hxmbl/everything/releases/download/v1.2.1/everything_1.2.1_Darwin_x86_64.tar.gz"
-      sha256 "6b6678233af3ed6ee677efff9faa6828346f122f6ed1dc9d7d58e65fbd2d4add"
+      url "https://github.com/hxmbl/everything/releases/download/v1.2.3/everything_1.2.3_Darwin_x86_64.tar.gz"
+      sha256 "ddd26b438ab9f6e0a176355d938178a542fb9774c16c6ab432fe154922273023"
 
       define_method(:install) do
         bin.install "everything"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hxmbl/everything/releases/download/v1.2.1/everything_1.2.1_Darwin_arm64.tar.gz"
-      sha256 "2e628e4278f09fcdb20e722af7c987b716df9fa7f855792badb465320fc55fe6"
+      url "https://github.com/hxmbl/everything/releases/download/v1.2.3/everything_1.2.3_Darwin_arm64.tar.gz"
+      sha256 "85e4446fe83cdddc4a41bd50081d12eaeb9e1bffed38f17f353f3436bcc28e37"
 
       define_method(:install) do
         bin.install "everything"
@@ -29,15 +29,15 @@ class Everything < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/everything/releases/download/v1.2.1/everything_1.2.1_Linux_x86_64.tar.gz"
-      sha256 "a8344b6c3db0c15d5e4c956081cdbbb671d501b0198a3feaa72622df6e22b964"
+      url "https://github.com/hxmbl/everything/releases/download/v1.2.3/everything_1.2.3_Linux_x86_64.tar.gz"
+      sha256 "a196d151cc790d64c73e831153fe8b418c9631f7ba6d7bf1f3dcb79eba3371b5"
       define_method(:install) do
         bin.install "everything"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hxmbl/everything/releases/download/v1.2.1/everything_1.2.1_Linux_arm64.tar.gz"
-      sha256 "77cf851cdb2f4f3abd7d41bd8a88922889298f21f3f0bd506e917c65745aea16"
+      url "https://github.com/hxmbl/everything/releases/download/v1.2.3/everything_1.2.3_Linux_arm64.tar.gz"
+      sha256 "41e6296789bda188b4d2f0da942d1d7b038ef2fbb946fd32c21308e669be8152"
       define_method(:install) do
         bin.install "everything"
       end
